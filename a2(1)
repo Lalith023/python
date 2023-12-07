@@ -1,4 +1,4 @@
-import random
+?import random
 import math
 lower = int(input("Enter Lower bound:- "))
 upper = int(input("Enter Upper bound:- "))
