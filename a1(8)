@@ -1,15 +1,13 @@
-#include <stdio.h>
-int main() {
-    char str[1000], ch;
-    int count = 0;
-    printf("Enter a string: ");
-    fgets(str, sizeof(str), stdin);
-    printf("Enter a character to find its frequency: ");
-    scanf("%c", &ch);
-    for (int i = 0; str[i] != '\0'; ++i) {
-        if (ch == str[i])
-            ++count;
-    }
-    printf("Frequency of %c = %d", ch, count);
-    return 0;
-}
+MAX = 26; 
+def compressString(s, n) : 
+    freq = [ 0 ] * MAX; 
+    for i in range(n) :
+        freq[ord(s[i]) - ord('a')] += 1; 
+    for i in range(MAX) : 
+        if (freq[i] == 0) :
+            continue; 
+        print((chr)(i + ord('a')),freq[i],end = " "); 
+if __name__ == "__main__" : 
+    s = "hello world"; 
+    n = len(s); 
+    compressString(s, n); 
